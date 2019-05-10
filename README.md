@@ -1,13 +1,14 @@
-## Titel van jouw website
-www.mijnliveomgeving.com is een website van (..jouw naam..) waar gebruikers kunnen (..nut gebruiker..) bedoeld voor (..doelgroep..)
-De website is enigszins te vergelijken met (..concurrentie1..) of (..concurrentie2..) maar toch anders omdat (..uniek aspect..)
+## The Chain
+The Chain is my own version of a website for the popular online D&D podcast the Chain. <br> Here users will be able to see the upload schedule for the youtube channel and any upcoming live talks that might come up. This website is meant for fans of the Chain, not for any personal gain in what ever way. <br> This website will be similar to those of other D&D streaming podcasts but unique in the minimalistic style choices. 
 
-### Uniek aan dit concept is: 
- * eerste u.s.p. (vul hier in, waarin jouw site anders is dan alle anderen)
- * tweede u.s.p. (vul hier in, waar jouw site door gaat opvallen, wat zal iedereen onthouden van jouw site?)
+### Unique about this concept is: 
+ * I believe in the less is more theory, this way I can build a sleek looking wbesite.
+ * I will make the easiest to navigate website with my sleek design.
 
 ---
 #### Milestones 
+
+Now here will follow some Dutch stuff which I'm required to have in the README for School.
 
 In het [Kwalificatiedossier] voor de opleiding Mediadeveloper staan een aantal *kerntaken* en *werkprocessen*.
 In onderstaande tabel zie je per kerntaak en werkproces welke werkzaamheden en documenten hier bij horen.
