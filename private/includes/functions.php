@@ -11,7 +11,7 @@ function dbConnect($config)
         return $connection;
 
     } catch (\PDOException $e) {
-        echo 'Fout bij maken van database verbinding: ' . $e->getMessage();
+        echo 'Connectie is kaput: ' . $e->getMessage();
     }
 
 }
