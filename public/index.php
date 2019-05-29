@@ -1,31 +1,37 @@
 <?php
-/**
- * Dit is de Front controller
- * ALLE requests die naar de webserver worden gedaan worden via de .htaccess naar dit script gestuurd.
- * Zo voorkom je dat je heel veel PHP bestanden hebt met dubbele code en logica.
- *
- * Alle urls hebben de volgende structuur: http://localhost/<controller>/<actie>/<optionele parameters>
- *
- * Bijv: http://localhost/page/show/about-us
- * (roept de show functie aan in de page controller met de parameter 'about-us')
- *
- * controller: page
- * actie: show
- * parameter: about-us
- *
- * De Front Controller (dit bestand) doorloopt elke keer de volgende procedure:
- *
- * 1. Inspecteert de URL die wordt opgevraagd
- * 2. Zoekt op in een "routing" tabel of hij deze URL of dit URL patroon kent
- * 3. Zo niet, dan is het een 404 oagina, want de website kent deze url niet
- * 4. Als de url wel wordt herkend en er een "route" is naar de juiste code dan:
- *  A. Wordt de juiste controller actie aangeroepen
- *  B. De controller krijgt alle gegevens door (de url, $_GET, $_POST, $_FILES etc)
- *  C. De controller haalt eventueel gegevens op via de Model laag (database queries e.d.)
- *  D. De controller geeft de gegevens aan de juiste view
- *  E. De view toont de gegevens op de juiste manier (met behulp van een foreach, if, switch e.d.)
- *  F. De complete view (met data) wordt door de controller teruggestuurd naar de gebruiker (dit is de Response)
- *
- */
+require '../private/includes/AltoRouter.php';
+$CONFIG = require '../private/includes/config.php';
+require '../private/includes/init.php';
 
+$router = new AltoRouter();
 
+$router->map( 'GET', '/', 'HomeController#homepage', 'home' );
+$router->map( 'GET', '/agenda', 'AgendaController#planning', 'agenda' );
+$router->map( 'GET', '/story', 'StoryController#storyOverview', 'story' );
+$router->map( 'GET', '/story/history', 'StoryController#history', 'history' );
+$router->map( 'GET', '/story/characters/[i:id]', 'StoryController#character', 'character' );
+$router->map( 'GET', '/about-us', 'PageController#aboutUs', 'about-us' );
+$router->map( 'GET', '/contact', 'ContactController#contact', 'contact' );
+
+$match = $router->match();
+
+if ( is_array( $match ) && is_callable( $match['target'] ) ) {
+    call_user_func_array( $match['target'], $match['params'] );
+    
+} 
+else if ( $match !== false ) {
+    list( $controller_name, $method ) = explode( '#', $match['target'] );
+    
+	try {
+		$controller = new $controller_name;
+        call_user_func_array( [ $controller, $method ], $match['params'] );   
+    } 
+    catch ( \Exception $e ) {
+		echo $e->getMessage();
+		exit;
+    }
+} 
+else {
+	header( $_SERVER["SERVER_PROTOCOL"] . ' 404 Not Found' );
+	echo '404: Onbekende pagina';
+}
