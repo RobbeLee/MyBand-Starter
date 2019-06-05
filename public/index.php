@@ -4,13 +4,12 @@ $CONFIG = require '../private/includes/config.php';
 require '../private/includes/init.php';
 
 $router = new AltoRouter();
-
+$router->setBasePath ($CONFIG['BASE_URL']);
 $router->map( 'GET', '/', 'HomeController#homepage', 'home' );
 $router->map( 'GET', '/agenda', 'AgendaController#planning', 'agenda' );
 $router->map( 'GET', '/story', 'StoryController#storyOverview', 'story' );
 $router->map( 'GET', '/story/history', 'StoryController#history', 'history' );
 $router->map( 'GET', '/story/characters/[i:id]', 'StoryController#character', 'character' );
-$router->map( 'GET', '/about-us', 'PageController#aboutUs', 'about-us' );
 $router->map( 'GET', '/contact', 'ContactController#contact', 'contact' );
 
 $match = $router->match();
