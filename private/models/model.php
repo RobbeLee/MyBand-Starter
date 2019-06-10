@@ -4,7 +4,7 @@
         $conn = dbConnect();
         $stmt = $conn->prepare("SELECT * FROM `Story`");
 
-        $stmt->execute;      
+        $stmt->execute();
         $stories = $stmt->fetchAll();
         return $stories;
     }
@@ -14,11 +14,7 @@
         $conn = dbConnect();
         $stmt = $conn->prepare("SELECT * FROM `Calendar`");
 
-        if (!$stmt->execute()) {
-            echo "Helemaal dood";
-            exit;
-            die;
-        }        
+        $stmt->execute();
         $Agenda = $stmt->fetchAll();
         return $Agenda;
     }
@@ -28,11 +24,7 @@
         $conn = dbConnect();
         $stmt = $conn->prepare("SELECT * FROM `Contact`");
 
-        if (!$stmt->execute()) {
-            echo "Helemaal dood";
-            exit;
-            die;
-        }        
+        $stmt->execute();
         $Contact = $stmt->fetchAll();
         return $Contact;
     }
@@ -42,11 +34,7 @@
         $conn = dbConnect();
         $stmt = $conn->prepare("SELECT * FROM `Story`");
 
-        if (!$stmt->execute()) {
-            echo "Helemaal dood";
-            exit;
-            die;
-        }        
+        $stmt->execute();
         $StoryO = $stmt->fetchAll();
         return $StoryO;
     }
