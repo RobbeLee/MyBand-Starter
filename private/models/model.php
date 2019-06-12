@@ -1,6 +1,4 @@
 <?php
-    include "../includes/functions.php";
-
     //home and histyory page
     function getStories(){   
 
