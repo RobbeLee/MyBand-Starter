@@ -1,11 +1,20 @@
 <?php
+    include "../includes/functions.php";
+
     //home and histyory page
-    function getStories(){
+    function getStories(){   
+
         $conn = dbConnect();
         $stmt = $conn->prepare("SELECT * FROM `Story`");
 
         $stmt->execute();
-        $stories = $stmt->fetchAll();
+
+        $stories = [];
+
+        while($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $stories[] = $result;
+        }
+
         return $stories;
     }
 

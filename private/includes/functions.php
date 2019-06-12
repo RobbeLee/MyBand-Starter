@@ -1,5 +1,6 @@
 <?php
 
+
 function dbConnect()
 {
     $config = require __DIR__ . "/config.php";
@@ -8,6 +9,9 @@ function dbConnect()
 
         $connection = new PDO($dsn, $config['DB_USER'], $config['DB_PASSWORD']);
 
+        $connection->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+        $connection->setAttribute( PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+        $connection->setAttribute( PDO::ATTR_EMULATE_PREPARES, false );
         return $connection;
 
     } catch (\PDOException $e) {

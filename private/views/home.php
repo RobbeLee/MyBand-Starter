@@ -9,7 +9,23 @@
 </head>
 <body>
     <section class="stories">
-        <?php //require 'nav.php';
+        <?php
+        include "../models/model.php";
+        
+        $stories = getStories();
+        foreach($stories as $story) {
+            // print_r($story);
+            echo '<div class="story">
+                    <h2 class="story__title">
+                        '.htmlspecialchars($story["Title"]).'
+                    </h2>
+                    <p class="story__text">
+                        '.htmlspecialchars($story["Post"]).'
+                    </p>
+                </div>';
+        }
+        ?>
+        <!-- <?php //waarom werkt het niet, help
             foreach ($stories as $story): 
         ?>
             <div class="story">
@@ -20,7 +36,7 @@
                     <?=htmlspecialchars($story['Post'])?>
                </p>
             </div>
-        <?php endforeach ?>
+        <?php endforeach ?> -->
     </section>
     <div class="sidebar">
         <ul>
