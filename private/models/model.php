@@ -29,7 +29,7 @@
     //contact page
     function getContact(){
         $conn = dbConnect();
-        $stmt = $conn->prepare("SELECT * FROM `Contact`");
+        $stmt = $conn->prepare("SELECT * FROM `contact`");
 
         $stmt->execute();
         $Contact = $stmt->fetchAll();
@@ -37,26 +37,25 @@
     }
 
     //story page
-    function getStoryO(){
+    function getHistory(){
         $conn = dbConnect();
-        $stmt = $conn->prepare("SELECT * FROM `Story`");
+        $stmt = $conn->prepare("SELECT * FROM `history`");
 
         $stmt->execute();
-        $StoryO = $stmt->fetchAll();
-        return $StoryO;
+        $history = $stmt->fetchAll();
+        return $history;
     }
 
     //character page
-    function getCharacter($title){
+    function getCharacter($id){
         $conn = dbConnect();
-        $stmt = $conn->prepare("SELECT * FROM characters WHERE Title=? LIMIT 1;");
-
-        if (!$stmt->execute([$title])) {
-            echo "Helemaal dood";
-            exit;
-            die;
-        }
-        $character = $stmt->fetchAll();
-        return $character;
+	    // Haal het huisje met de opgegeven id op uit de database
+        $stmt = $conn->prepare('SELECT * FROM `characters` WHERE id = ?');
+        
+	    $character = [$id];
+	    $stmt->execute($character);
+        $character = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+	    return $character;
     }
 ?>

@@ -1,23 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>contact</title>
-        <link rel="stylesheet" href="contact.css">
-    </head>
-    <body>
+<?php $this->layout('layout')?>
+
+<?php $this->start('pagetitle')?>
+Contact
+<?php $this->stop('pagetitle')?>
+
+<?php $this->start('css')?>
+<link rel="stylesheet" href="<?php echo url('/css/contact.css')?>">
+<?php $this->stop('css')?>
+
         <?php  foreach ($Contact as $contact): ?>
         <div class="text">
             <h2 class="text__Title">
-                <?=htmlspecialchars($story['ContactTitle'])?>
+                <?=htmlspecialchars($contact['contactTitle'])?>
             </h2>
             <p class="text__txt">
-                <?=htmlspecialchars($story['ContactText'])?>
+                <?=htmlspecialchars($contact['contactText'])?>
             </p>
         </div>
         <?php endforeach ?>
+
         <div class="form">
             <form class="contact">
                 <h2 class="formTitle">Contact</h2>

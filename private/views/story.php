@@ -1,17 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Story Overview</title>
-        <link rel="stylesheet" href="../../public/css/storyO.css">
-    </head>
-    <body>
-        <?php foreach ($storyO as $story): ?>
+<?php $this->layout('layout')?>
+
+<?php $this->start('pagetitle')?>
+Story overview
+<?php $this->stop('pagetitle')?>
+
+<?php $this->start('css')?>
+<link rel="stylesheet" href="<?php echo url('/css/storyO.css')?>">
+<?php $this->stop('css')?>
+
+        <?php foreach ($history as $story): ?>
             <div class="story">
                 <h2 class="story__title">
-                    
                     <?=htmlspecialchars($story['historyTitle'])?>
                 </h2>
                 <p class="story__txt">
@@ -19,6 +18,7 @@
                 </p>
             </div>
         <?php endforeach ?>
+
         <div class="cards">
             <div class="card">
                 <div class="card__img-container">
@@ -26,7 +26,7 @@
                 </div>  
                 <h3 class="card__title">King</h3>
                 <p class="card__p"><i>Comamnder</i></p>
-                <a href="" target="_blank" class="card__link">More about King</a>
+                <a href="story/characters/king" target="_blank" class="card__link">More about King</a>
             </div>
             <div class="card">
                 <div class="card__img-container">
@@ -61,5 +61,3 @@
                 <a href="" target="_blank" class="card__link">More about Copper</a>
             </div>
         </div>
-    </body>
-</html>

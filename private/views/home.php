@@ -22,18 +22,6 @@ Home
                 </div>';
         }
         ?>
-        <!-- <?php //waarom werkt het niet, help
-            foreach ($stories as $story): 
-        ?>
-            <div class="story">
-               <h2 class="story__title">
-                    <?=htmlspecialchars($story['Ttile'])?>
-               </h2>
-               <p class="story__text">
-                    <?=htmlspecialchars($story['Post'])?>
-               </p>
-            </div>
-        <?php endforeach ?> -->
     </section>
     <div class="sidebar">
         <ul>
