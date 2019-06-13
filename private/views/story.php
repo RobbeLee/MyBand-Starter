@@ -5,7 +5,7 @@ Story overview
 <?php $this->stop('pagetitle')?>
 
 <?php $this->start('css')?>
-<link rel="stylesheet" href="<?php echo url('/css/storyO.css')?>">
+<link rel="stylesheet" href="<?php echo url('/css/story.css')?>">
 <?php $this->stop('css')?>
 
         <?php foreach ($history as $story): ?>

@@ -7,7 +7,7 @@ Home
 <?php $this->start('css')?>
 <link rel="stylesheet" href="<?php echo url('/css/home.css')?>">
 <?php $this->stop('css')?>
-
+<div class="wrapper">
     <section class="stories">
         <?php
         foreach($stories as $story) {
@@ -30,3 +30,4 @@ Home
             <li><a href="https://www.youtube.com/user/mcolville" target="_blank" rel="noopener noreferrer">Youtube</a></li>
         </ul>
     </div>
+</div>
