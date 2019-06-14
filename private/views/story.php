@@ -7,7 +7,7 @@ Story overview
 <?php $this->start('css')?>
 <link rel="stylesheet" href="<?php echo url('/css/story.css')?>">
 <?php $this->stop('css')?>
-
+<div class="wrapper">
         <?php foreach ($history as $story): ?>
             <div class="story">
                 <h2 class="story__title">
@@ -61,3 +61,4 @@ Story overview
                 <a href="" target="_blank" class="card__link">More about Copper</a>
             </div>
         </div>
+     </div>

@@ -2,7 +2,7 @@
 
 <nav class="nav">
     <div class="left-container">
-        <a href="/" class="left-container__brand" title="The Chain">The Chain</a>
+        <a href="/MyBand-Starter/public/" class="left-container__brand" title="The Chain">The Chain</a>
     </div>
     <div class="right-container">
         <a href="/MyBand-Starter/public/" class="right-container__a">Home</a>

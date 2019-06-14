@@ -7,7 +7,7 @@ Contact
 <?php $this->start('css')?>
 <link rel="stylesheet" href="<?php echo url('/css/contact.css')?>">
 <?php $this->stop('css')?>
-
+<div class="wrapper">
         <?php  foreach ($Contact as $contact): ?>
         <div class="text">
             <h2 class="text__Title">
@@ -29,5 +29,4 @@ Contact
                 <input type="textfield" name="message" placeholder="Message..." class="msgInput" required>
             </form>
         </div>
-    </body>
-</html>
+    </div>
