@@ -1,5 +1,5 @@
 /* de stories */
-.story{
+.story {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -7,7 +7,7 @@
     position: relative;
 }
 
-    .story::after{
+    .story::after {
         content: '';
         position: absolute;
         bottom: 0;
@@ -17,7 +17,7 @@
         background: #6600ee;
     }
 
-    .story__title{
+    .story__title {
         width: 10%;
         position: sticky;
         top: 80px;
@@ -39,7 +39,7 @@
         background: #f3f3f3;
     }
     
-    .story__text{
+    .story__text {
         padding-left: 15px;
         /* width: 50%; */
         width: 50vw;
@@ -57,29 +57,17 @@
     /* niet geheel vreselijke manier? */
 
 /* de sidebar */
-.sidebar{
+.sidebar {
     background: #fafafa;
 }
-    .sidebar__list{
+    .sidebar__list {
         list-style: none;
     }
-        .sidebar__a{
+        .sidebar__a {
             text-decoration: none;
             cursor: pointer;
             color: black;
         }
-            .sidebar__a:hover{
+            .sidebar__a:hover {
                 color: #6600ee;
             }
-
-/* padding-left: 15px;
-
-width: 50%;
-
-width: 50vw;
-
-position: relative;
-
-padding-bottom: 20px;
-
-margin-bottom: 20px; */

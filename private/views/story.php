@@ -19,7 +19,7 @@ Story overview
             </div>
         <?php endforeach ?>
 
-        <div class="cards">
+        <div class="cards-container">
             <div class="card">
                 <div class="card__img-container">
                     <img src="../../public/images/" alt="King" class="card__img"> 

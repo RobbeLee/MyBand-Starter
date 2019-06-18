@@ -1,68 +1,107 @@
-.card{
-    background-color: #fff;
-    padding: 20px;
-    width: 300px;
-    height: 400px;
-    box-shadow: 3px 3px 10px -8px #000;
-    margin: 0 20px 20px 0;
+.story {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
     flex-direction: column;
-    position: relative;
-    border-radius: 12px;
+    flex-wrap: nowrap;
+    padding-bottom: 20px;
+    align-items: center;
 }
-    .card__img-container {
-        width: 150px;
-        height: 150px;
-        border-radius: 100%;
-        overflow: hidden;
-        border: 1px solid rgba(0,0,0,.2);
-        margin-bottom: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-        .card__img{
-            height: 100%;
-            width: auto;
-        }
-    .card__title{
+    .story__title {
+        text-align: center;
+        position: relative;
         justify-content: center;
         padding-bottom: 10px;
-        margin-bottom: 10px;
-        position: relative;
+        display: flex;
+        justify-content: center;
     }
-        .card__title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 200px;
-            height: 1px;
-            background: #6600ee;
-        }
-    .card__link{
+        .story__title::after {
+        content: '';
         position: absolute;
-        bottom: 20px;
-        left: 20px;
-        color: #000;
-        font-weight: 500;
-        cursor: pointer;
-    }
-        .card__link::after{
-            content: '';
-            position: absolute;
-            height: 2px;
-            width: 100%;
-            bottom: 0;
-            left: 0;
-            background: #6600ee;
-            transform: scale(0,1);
-            transform-origin: left;
-            transition: transform 200ms ease;
+        bottom: 0;
+        width: 500px;
+        height: 1px;
+        background: #6600ee;
         }
-            .card__link:hover::after {
-                transform: scale(1,1);
+
+    .story__txt {
+        width: 50vw;
+    }
+
+/* have some card styling ye */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+    .card {
+        background-color: #fff;
+        padding: 10px;
+        width: 300px;
+        height: 350px;
+        box-shadow: 3px 3px 10px -8px #000;
+        margin: 0 20px 20px 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        border-radius: 12px;
+    }
+        .card__img-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 100%;
+            overflow: hidden;
+            border: 1px solid rgba(0,0,0,.2);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            .card__img {
+                height: 100%;
+                width: auto;
             }
+
+        .card__title {
+            justify-content: center;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+            .card__title::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 200px;
+                height: 1px;
+                background: #6600ee;
+            }
+
+        .card__link {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: #000;
+            font-weight: 500;
+            cursor: pointer;
+            text-decoration: none;
+        }
+            .card__link::after {
+                content: '';
+                position: absolute;
+                height: 2px;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                background: #6600ee;
+                transform: scale(0,1);
+                transform-origin: left;
+                transition: transform 200ms ease;
+            }
+                .card__link:hover::after {
+                    transform: scale(1,1);
+                }
