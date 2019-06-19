@@ -1,0 +1,30 @@
+.story {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    position: relative;
+}
+    .story__title {
+        position: relative;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+        .story__title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 35vw;
+            width: 400px;
+            height: 1px;
+            background: #6600ee;
+            justify-content: center;
+        }
+    .story__short {
+        justify-content: center;
+        text-align: center;
+    }
+    .story__long {
+        text-align: center;
+    }

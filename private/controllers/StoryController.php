@@ -10,12 +10,7 @@
             $template_engine = get_template_engine();
             echo $template_engine->render( 'history', ['stories' => $stories]);
         }
-        function character(){
-            $character = getCharacter( $id );
-            $template_engine = get_template_engine();
-            echo $template_engine->render( 'character', ['character' => $character]);
-        }
-        function king(){
+        function character($id){
             $character = getCharacter( $id );
             $template_engine = get_template_engine();
             echo $template_engine->render( 'character', ['character' => $character]);

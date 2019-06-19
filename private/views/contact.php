@@ -19,14 +19,16 @@ Contact
         </div>
         <?php endforeach ?>
 
-        <div class="form">
-            <form class="contact">
-                <h2 class="formTitle">Contact</h2>
-                <input type="email" name="email" placeholder="Email" class="emailInput" required>
-                <input type="text" name="firstName" placeholder="first name" class="FNinput" required>
-                <input type="text" name="lastName" placeholder="last name" class="LNinput" required>
-                <input type="text" name="subject" placeholder="Subject" class="subjectInput" required>
-                <input type="textfield" name="message" placeholder="Message..." class="msgInput" required>
-            </form>
-        </div>
+        <form class="form">
+            <h2 class="form__title">Contact</h2>
+            <p class="form__txt">Please fill out this form</p>
+            <div class="form__input">
+                <div class="form__input__top">
+                    <p class="form__input__p">Name </p> <input type="text"      name="firstName" placeholder="full name" class="input" required>
+                    <p class="form__input__p">Email </p> <input type="email"     name="email"     placeholder="Email"      class="input" required>
+                    <p class="form__input__p">Subject </p> <input type="text"      name="subject"   placeholder="Subject"    class="input" required>
+                </div>
+                <p class="form__input__p">Message:</p><textarea type="text" name="message"   placeholder="Message..." class="form__input__msg" required></textarea>
+            </div>
+        </form>
     </div>

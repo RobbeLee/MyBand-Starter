@@ -26,7 +26,7 @@ Story overview
                 </div>  
                 <h3 class="card__title">King</h3>
                 <p class="card__p"><i>Comamnder</i></p>
-                <a href="story/characters/king" target="_blank" class="card__link">More about King</a>
+                <a href="<?=url('/story/characters/king')?>" class="card__link">More about King</a>
             </div>
             <div class="card">
                 <div class="card__img-container">
@@ -34,7 +34,7 @@ Story overview
                 </div>  
                 <h3 class="card__title">Judge</h3>
                 <p class="card__p"><i>Senior Officer</i></p>
-                <a href="" target="_blank" class="card__link">More about Judge</a>
+                <a href="<?=url('/story/characters/judge')?>" class="card__link">More about Judge</a>
             </div>
             <div class="card">
                 <div class="card__img-container">
@@ -42,7 +42,7 @@ Story overview
                 </div>  
                 <h3 class="card__title">Slim</h3>
                 <p class="card__p"><i>Senior officer</i></p>
-                <a href="" target="_blank" class="card__link">More about Slim</a>
+                <a href="<?=url('/story/characters/slim')?>" class="card__link">More about Slim</a>
             </div>
             <div class="card">
                 <div class="card__img-container">
@@ -50,15 +50,23 @@ Story overview
                 </div>  
                 <h3 class="card__title">Judge</h3>
                 <p class="card__p"><i>Senior officer</i></p>
-                <a href="" target="_blank" class="card__link">More about Judge</a>
+                <a href="<?=url('/story/characters/judge')?>" class="card__link">More about Judge</a>
+            </div>
+            <div class="card">
+                <div class="card__img-container">
+                    <img src="../../public/images/" alt="boots" class="card__img"> 
+                </div>  
+                <h3 class="card__title">Boots</h3>
+                <p class="card__p"><i>Senior officer</i></p>
+                <a href="<?=url('/story/characters/boots')?>" class="card__link">More about Boots</a>
             </div>
             <div class="card">
                 <div class="card__img-container">
                     <img src="../../public/images/" alt="Copper" class="card__img"> 
                 </div>  
-                <h3 class="card__title">Copper</h3>
+                <h3 class="card__title">Copper and Bigcat</h3>
                 <p class="card__p"><i>Senior officer</i></p>
-                <a href="" target="_blank" class="card__link">More about Copper</a>
+                <a href="<?=url('/story/characters/copper')?>" class="card__link">More about Copper</a>
             </div>
         </div>
      </div>

@@ -1,0 +1,26 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+    .text__title {
+        text-align: center;
+        position: relative;
+        justify-content: center;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+        .text__title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 500px;
+            height: 1px;
+            background: #6600ee;
+        }
+
+    .agenda{
+        background-color: #fafafa;
+    }

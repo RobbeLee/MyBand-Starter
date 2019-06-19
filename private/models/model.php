@@ -50,11 +50,15 @@
     function getCharacter($id){
         $conn = dbConnect();
 	    // Haal het huisje met de opgegeven id op uit de database
-        $stmt = $conn->prepare('SELECT * FROM `characters` WHERE id = ?');
+        $stmt = $conn->prepare('SELECT * FROM `characters` WHERE title = ?');
         
 	    $character = [$id];
 	    $stmt->execute($character);
         $character = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        $yes = explode(';', $character['Short']);
+
+        $character['Short'] = $yes;
         
 	    return $character;
     }

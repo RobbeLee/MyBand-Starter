@@ -9,11 +9,7 @@ $router->map( 'GET', '/', 'HomeController#homepage', 'home' );
 $router->map( 'GET', '/agenda', 'AgendaController#planning', 'agenda' );
 $router->map( 'GET', '/story', 'StoryController#storyOverview', 'storyO' );
 $router->map( 'GET', '/story/history', 'StoryController#history', 'history' );
-$router->map( 'GET', '/story/characters/boots', 'StoryController#character', 'boots' );
-$router->map( 'GET', '/story/characters/copper', 'StoryController#character', 'copper' );
-$router->map( 'GET', '/story/characters/judge', 'StoryController#character', 'judge' );
-$router->map( 'GET', '/story/characters/king', 'StoryController#king', 'king' );
-$router->map( 'GET', '/story/characters/slim', 'StoryController#character', 'slim' );
+$router->map( 'GET', '/story/characters/[a:id]', 'StoryController#character', 'character' );
 $router->map( 'GET', '/contact', 'ContactController#contact', 'contact' );
 
 $match = $router->match();
