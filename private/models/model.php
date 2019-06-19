@@ -62,4 +62,25 @@
         
 	    return $character;
     }
+
+    //search page
+    function getSearch($searchterm) {
+        $searchResults = [];
+        $pdo = dbConnect();
+    
+        $sql = 'SELECT * FROM `Story` WHERE `Title` LIKE :search_term';
+        $stmt = $pdo->prepare($sql);
+        $parameters = [
+            'search_term' => '%' . $searchterm . '%'
+        ];
+        $stmt->execute($parameters);
+
+        foreach($stmt as $searchie) {
+            $rij = [];
+            $rij['Title'] = $searchie['Title'];
+            $rij['Story'] = $searchie['Post'];
+            $searchResults[] = $rij;
+        }
+        return $searchResults;
+    }
 ?>

@@ -9,5 +9,6 @@
         <a href="/MyBand-Starter/public/story" class="right-container__a">Story</a>
         <a href="/MyBand-Starter/public/agenda" class="right-container__a">Agenda</a>
         <a href="/MyBand-Starter/public/contact" class="right-container__a">Contact</a>
+        <a href="/MyBand-Starter/public/search" class="right-container__a">Search</a>
     </div>
 </nav>

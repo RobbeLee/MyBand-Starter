@@ -9,6 +9,7 @@ Home
 <?php $this->stop('css')?>
 <div class="wrapper">
     <section class="stories">
+        <h2 class="stories__title">The Chronicle</h2>
         <?php
         foreach($stories as $story): ?>
             <div class="story">
@@ -30,5 +31,12 @@ Home
             <li class="sidebar__li"><a href="https://www.youtube.com/user/mcolville" target="_blank" rel="noopener noreferrer" class="sidebar__a">Youtube</a></li>
         </ul>
     </div>
+</div>
+<div class="search-bar">
+    <form action="search.php" method="GET" class="form">
+        <input type="hidden" name="page" vlaue="search"/>
+        <input type="text" name="term" vlaue="" placeholder="Vul hier de zoekopdracht in..." class="form__input"/>
+        <button type="submit" class="submit" class="form__btn">Zoek</button>
+    </form>
 </div>
 <script src="js/home.js"></script>

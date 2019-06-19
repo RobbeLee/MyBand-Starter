@@ -11,6 +11,8 @@ $router->map( 'GET', '/story', 'StoryController#storyOverview', 'storyO' );
 $router->map( 'GET', '/story/history', 'StoryController#history', 'history' );
 $router->map( 'GET', '/story/characters/[a:id]', 'StoryController#character', 'character' );
 $router->map( 'GET', '/contact', 'ContactController#contact', 'contact' );
+$router->map( 'GET', '/search', 'SearchController#search', 'search' );
+
 
 $match = $router->match();
 
