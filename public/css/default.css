@@ -7,3 +7,76 @@ a{
     padding-left: 10px;
     font-family: 'Roboto', sans-serif;
 }
+    .title {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+        padding-bottom: 20px;
+    }
+        .title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 30vw;
+            width: 250px;
+            height: 1px;
+            background: #6600ee;
+        }
+/* general styling for the story on the search and home page */
+    .story {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        position: relative;
+        left: 10px;
+    }
+
+        .story::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 20vw;
+            width: 700px;
+            height: 1px;
+            background: #6600ee;
+        }
+
+    .story__title {
+        width: 10%;
+        position: sticky;
+        top: 80px;
+        height: 100px;
+    }
+    .story__btn {
+        width: 100%;
+        font-size: 18px;
+        background: #fafafa;
+        border: 0;
+        border-radius: 8px;
+        padding: 10px;
+        cursor: pointer;
+        transition: background 400ms ease;
+    }
+
+        .story__btn:hover {
+            background: #6600ee;
+            color: white;
+            transition: .5s;
+        }
+    .story__text {
+        padding-left: 15px;
+        /* width: 50%; */
+        width: 50vw;
+        position: relative;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        display: -webkit-box;
+        height: 110px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 6;
+    }

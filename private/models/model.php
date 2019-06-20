@@ -75,11 +75,11 @@
         ];
         $stmt->execute($parameters);
 
-        foreach($stmt as $searchie) {
+        foreach($stmt->fetchAll() as $searchie) {
             $rij = [];
             $rij['Title'] = $searchie['Title'];
             $rij['Story'] = $searchie['Post'];
-            $rij[] = $searchResults;
+            $searchResults[] = $rij;
         }
         return $searchResults;
     }

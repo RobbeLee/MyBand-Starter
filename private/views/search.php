@@ -21,11 +21,17 @@ Search Results
 
     <div class="searchResults">
     <?php foreach ($searchResults as $result): ?>
-        <?php print_r ($result)?>
-	    <div class="results">
-		    <h2><?php echo $result['Title'] ?></h2>
-		    <p><?php echo $result['Post'] ?></p>
-	    </div>
-        <?php endforeach; ?>
+            <div class="story">
+                <h2 class="story__title">
+                    <?=htmlspecialchars($result["Title"])?>
+                    <button class="story__btn">Read more</button>
+                </h2>
+                <p class="story__text" data-open="true">
+                    <?=htmlspecialchars($result["Story"])?>
+                </p>
+            </div>
+    <?php endforeach; ?>
     </div>
 </div>
+
+<script src="js/home.js"></script>

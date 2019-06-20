@@ -9,11 +9,11 @@ Story overview
 <?php $this->stop('css')?>
 <div class="wrapper">
         <?php foreach ($history as $story): ?>
-            <div class="story">
-                <h2 class="story__title">
+            <div class="story-overview">
+                <h2 class="story-overview__title">
                     <?=htmlspecialchars($story['historyTitle'])?>
                 </h2>
-                <p class="story__txt">
+                <p class="story-overview__txt">
                     <?=htmlspecialchars($story['historyText'])?>
                 </p>
             </div>
