@@ -79,7 +79,7 @@
             $rij = [];
             $rij['Title'] = $searchie['Title'];
             $rij['Story'] = $searchie['Post'];
-            $searchResults[] = $rij;
+            $rij[] = $searchResults;
         }
         return $searchResults;
     }

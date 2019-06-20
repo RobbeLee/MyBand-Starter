@@ -22,4 +22,13 @@ Agenda
     <div class="agenda">
         <iframe src="https://calendar.google.com/calendar/b/2/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=dGhlY2hhaW5vZmFjaGVyb25AZ21haWwuY29t&amp;color=%23039BE5" style="border-width:0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
+    <? //foreach ($Agenda as $agenda): ?>
+        <div class="times" id="times">
+            <h2 id="times__title">
+                Streaming Times
+            </h2>
+            <button type="button" id="loadDoc">Change Content</button>
+        </div>
+    <?php //endforeach ?>
 </div>
+<script src="js/ajax.js"></script>

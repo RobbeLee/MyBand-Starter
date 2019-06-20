@@ -23,4 +23,22 @@
 
     .agenda{
         background-color: #fafafa;
+        padding-bottom: 20px;
     }
+
+    .times__title {
+        text-align: center;
+        position: relative;
+        justify-content: center;
+        padding-bottom: 10px;
+        display: flex;
+        justify-content: center;
+    }
+        .times__title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 500px;
+            height: 1px;
+            background: #6600ee;
+        }
