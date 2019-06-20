@@ -21,7 +21,7 @@ Home
         <?php
         foreach($stories as $story): ?>
             <div class="story">
-                <h2 class="story__title title">
+                <h2 class="story__title">
                     <?=htmlspecialchars($story["Title"])?>
                     <button class="story__btn">Read more</button>
                 </h2>

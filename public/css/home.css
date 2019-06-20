@@ -2,6 +2,9 @@
     display: flex;
 }
     /* de story staat nu in Default.css */
+    .story {
+        flex-direction: row;
+    }
     /* de sidebar */
     .sidebar {
         background: #fafafa;
