@@ -28,3 +28,6 @@
     .story__long {
         text-align: center;
     }
+@media (max-width: 375px) {}
+
+@media (min-width: 760px) and (max-width: 1000px) {}

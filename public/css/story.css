@@ -105,3 +105,27 @@
                 .card__link:hover::after {
                     transform: scale(1,1);
                 }
+@media (max-width: 375px) {
+    .story-overview__title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 100px;
+        height: 1px;
+        background: #6600ee;
+    }
+
+    .story-overview__txt {
+        width: 200px;
+    }
+
+    .card__link {
+        color: #6600ee;
+    }
+}
+
+ @media (min-width: 760px) and (max-width: 1000px) {
+    .card__link {
+        color: #6600ee;
+    }
+ }

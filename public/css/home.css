@@ -27,6 +27,7 @@
                     color: #6600ee;
                     transition: .2s;
                 }
+                
 @media (max-width: 375px) {
     .wrapper {
         left: 0;

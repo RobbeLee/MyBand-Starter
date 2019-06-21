@@ -29,7 +29,7 @@ Contact
                     <p class="form__input__p">Subject </p> <input type="text"      name="subject"   placeholder="Subject"    class="input" required>
                 </div>
                 <p class="form__input__p">Message:</p><textarea type="text" name="message"   placeholder="Message..." class="form__input__msg" required></textarea>
-                <button type="submit">Submit</button>
+                <button type="form__submit">Submit</button>
             </div>
         </form>
     </div>
