@@ -1,3 +1,6 @@
+## LINK
+http://26785.hosts2.ma-cloud.nl/MyBand-Starter/public/
+
 ## The Chain
 The Chain is my own version of a website for the popular online D&D podcast the Chain. <br> Here users will be able to see the upload schedule for the youtube channel and any upcoming live talks that might come up. This website is meant for fans of the Chain, not for any personal gain in what ever way. <br> This website will be similar to those of other D&D streaming podcasts but unique in the minimalistic style choices. 
 
