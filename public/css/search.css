@@ -32,10 +32,14 @@
             background: #6600ee;
             position: relative;
             overflow: hidden;
-            z-index: 1;
             cursor: pointer;
+            border: none;
         }
 
         .bruh {
             color: #6600ee;
         }
+
+@media (max-width: 375px) {
+    
+}
